@@ -33,7 +33,7 @@ If you use different shells like fish (In my case):
 ```
 source venv/bin/activate.fish
 ```
-Now install Django, you should install the Django version I used in [requirements.txt]().
+Now install Django, you should install the Django version I used in [requirements.txt](https://github.com/Daniel1404/Poll-app/blob/main/requirements.txt).
 
 ```
 pip3 install django=="VERSION" 
@@ -99,4 +99,4 @@ This is a quick explanation of the folder structure that implements the Django w
         * Display any content from a database to the webpage
 
 
-For further explanation go to the **NOTES_files** folder
+For further explanation go to the [**NOTES_files**](https://github.com/Daniel1404/Poll-app/blob/main/NOTES_files) folder
