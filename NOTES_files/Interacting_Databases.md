@@ -37,8 +37,7 @@ To create an object of one of the models, just use it's constructor, for example
 ![Second query](../.screenshots/second-query.png "Second query")
 
 
-For more information about querying go to [this](https://docs.
-djangoproject.com/en/3.1/topics/db/queries/) article from Django Documentation.
+For more information about querying go to [this](https://docs.djangoproject.com/en/3.1/topics/db/queries/) article from Django Documentation.
 
 
 
