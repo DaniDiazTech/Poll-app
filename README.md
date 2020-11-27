@@ -1,7 +1,10 @@
-# NOTES
+# Django Tutorial
+
+## About
+Django is an open-source python framework for Web Development.
 
 This is my version of the poll app available in 
-[Django Documentation](https://docs.djangoproject.com/en/3.1/intro/tutorial01/)
+[Django Documentation](https://docs.djangoproject.com/en/3.1/intro/tutorial01/).
 
 
 ## Getting started
@@ -36,7 +39,7 @@ source venv/bin/activate.fish
 Now install Django, you should install the Django version I used in [requirements.txt](https://github.com/Daniel1404/Poll-app/blob/main/requirements.txt).
 
 ```
-pip3 install django=="VERSION" 
+pip3 install -r requirements.txt
 ```
 
 To start a project do:
@@ -48,13 +51,49 @@ django-admin startproject "NAME OF PROJECT"
 To start an app use:
 
 ```
-django-admin startapp poll-app
+django-admin startapp poll
+```
+To check if everything is correctly installed, run in the shell the following command:
+
+```
+python3 manage.py runserver 
+```
+By default Django uses the port 8000, but you can specify the port you want after runserver, let's run django in the port 1313
+
+```
+python3 manage.py runserver 1313 
 ```
 
+Now, type in the bar of your browser **localhost:1313**, or **http://127.0.0.1:1313** (localhost: and 127.0.0.1 are equivalent). 
+
+You should have something like this:
+
+![First Django Screenshot](.screenshots/first.jpg "First website with Django")
 
 ## Structure
 
 This is a quick explanation of the folder structure that implements the Django web framework.
+### Tree of the project
+
+```
+├── manage.py
+├── Mysite
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+└── poll
+    ├── admin.py
+    ├── apps.py
+    ├── __init__.py
+    ├── migrations
+    │   ├── __init__.py
+    ├── models.py
+    ├── tests.py
+    └── views.py
+```
+
 
 ### Files in the project folder:
 
@@ -75,6 +114,8 @@ This is a quick explanation of the folder structure that implements the Django w
         * Manage the urls in our website. It's a key file
     * wsgi.py:
         * used to deploy to a server
+    * asgi.py
+        * used to deploy to a server with ASGI, the emerging Python standard for asynchronous web servers and applications.
         
 * The site could have any amount of apps:
 
