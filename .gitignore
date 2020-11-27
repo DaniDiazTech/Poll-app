@@ -1,5 +1,5 @@
 # To ignore screenshots
-.screenshots/
+# .screenshots/
 
 # Ignore pycache
 poll-app/Mysite/poll/__pycache__
