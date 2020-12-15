@@ -5,3 +5,12 @@
 poll-app/Mysite/poll/__pycache__
 
 poll-app/Mysite/poll/migrations/__pycache__
+
+# Virtual environments
+venv/
+
+
+# Per project settings
+.idea/
+.vim/
+.undodir/
