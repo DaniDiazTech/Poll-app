@@ -1,16 +1,18 @@
-# from django.shortcuts import render
+from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Question # Create your views here.
+
+
+def home(request):
+	message = "This is the home page of the site!"
+	return HttpResponse(message)
 
 
 # Created the view for the /poll url
 def index(request):
 	latest_question_list = Question.objects.order_by('-publish_date')[:5]
-	# latest_questions = Question.objects.order_by("-pub_date")[:5]
-	output = ", ".join(question.question_text for question in latest_question_list)
-
-	# return HttpResponse("Awesome job,this is the index page" + "\n" + output
-	return HttpResponse(output)
+	context = {'latest_question_list': latest_question_list}
+	return render(request, "poll/index.html", context)
 
 
 def detail_question(request, question_id):
@@ -23,3 +25,8 @@ def result(request, question_id):
 
 def vote(request, question_id):
 	return HttpResponse(f"Upvote of question : {question_id}")
+
+
+def test(request):
+	message = "This is my message"
+	return HttpResponse(message)
