@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block head_content %}
+    {% endblock %}
+</head>
+<body>
+<hr>
+<p>Header</p>
+<hr>
+{% block body_content %}
+{% endblock %}
+{% include 'poll/footer.html' %}
+</body>
+</html>

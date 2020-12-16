@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Question page</title>
-</head>
-<body>
+{% extends 'poll/base.html' %}
+
+{% block head_content %}
+    <title>Poll Question</title>
+{% endblock %}
+
+{% block body_content %}
+<h1>Active questions: </h1>
 
 {% if latest_question_list %}
     <ol>
@@ -15,5 +16,4 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
-</body>
-</html>
+{% endblock %}

@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from .models import Question # Create your views here.
+from .models import Question
+# Create your views here.
 
 
 def home(request):
@@ -16,7 +17,9 @@ def index(request):
 
 
 def detail_question(request, question_id):
-	return HttpResponse(f"This is the detail view of the question: {question_id}")
+	# Get an object, if it doesn't exist raise a 404 error
+	question = get_object_or_404(Question, pk=question_id)
+	return render(request, "poll/detail.html", {"question":question})
 
 
 def result(request, question_id):
