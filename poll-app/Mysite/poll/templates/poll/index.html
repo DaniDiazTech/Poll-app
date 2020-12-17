@@ -6,14 +6,11 @@
 
 {% block body_content %}
 <h1>Active questions: </h1>
-
-{% if latest_question_list %}
-    <ol>
-    {% for question in latest_question_list %}
-        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
-    {% endfor %}
-    </ol>
-{% else %}
+<ol>
+{% for question in latest_question_list %}
+    <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+</ol>
+{% empty %}
     <p>No polls are available.</p>
-{% endif %}
+{% endfor %}
 {% endblock %}

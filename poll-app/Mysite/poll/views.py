@@ -5,8 +5,7 @@ from .models import Question
 
 
 def home(request):
-	message = "This is the home page of the site!"
-	return HttpResponse(message)
+	return render(request, "poll/home.html")
 
 
 # Created the view for the /poll url
