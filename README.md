@@ -140,4 +140,5 @@ This is a quick explanation of the folder structure that implements the Django w
         * Display any content from a database to the webpage
 
 
-For further explanation go to the [**NOTES_files**](https://github.com/Daniel1404/Poll-app/blob/main/NOTES_files) folder
+I strongly encourage you to review [**NOTES_files**](https://github.com/Daniel1404/Poll-app/blob/main/NOTES_files) folder, since it has quick explanations, about the basics of Django.
+
