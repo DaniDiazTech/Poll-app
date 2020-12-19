@@ -14,3 +14,7 @@ venv/
 .idea/
 .vim/
 .undodir/
+.vscode/
+
+# The database Obviusly :/
+poll-app/Mysite/db.sqlite3
